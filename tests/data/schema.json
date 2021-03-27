@@ -1,0 +1,83 @@
+{
+  "key_properties": [
+    "id"
+  ],
+  "schema": {
+    "properties": {
+      "assignee": {
+        "properties": {
+        },
+        "type": [
+          "null",
+          "object"
+        ]
+      },
+      "created_at": {
+        "format": "date-time",
+        "type": [
+          "null",
+          "string"
+        ]
+      },
+      "id": {
+        "type": [
+          "null",
+          "integer"
+        ]
+      },
+      "labels": {
+        "items": {
+          "properties": {
+            "id": {
+              "type": [
+                "null",
+                "integer"
+              ]
+            },
+            "name": {
+              "type": [
+                "null",
+                "string"
+              ]
+            }
+          },
+          "type": "object"
+        },
+        "type": [
+          "null",
+          "array"
+        ]
+      },
+      "locked": {
+        "type": [
+          "null",
+          "boolean"
+        ]
+      },
+      "pull_request": {
+        "properties": {
+          "url": {
+            "type": [
+              "null",
+              "string"
+            ]
+          }
+        },
+        "type": [
+          "null",
+          "object"
+        ]
+      },
+      "title": {
+        "type": "string"
+      }
+    },
+    "selected": true,
+    "type": [
+      "null",
+      "object"
+    ]
+  },
+  "stream": "issues",
+  "type": "SCHEMA"
+}

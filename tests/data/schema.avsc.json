@@ -1,0 +1,86 @@
+{
+  "fields": [
+    {
+      "name": "created_at",
+      "type": [
+        "null",
+        {
+          "logicalType": "timestamp-millis",
+          "type": "long"
+        }
+      ]
+    },
+    {
+      "name": "id",
+      "type": [
+        "null",
+        "long"
+      ]
+    },
+    {
+      "name": "labels",
+      "type": [
+        "null",
+        {
+          "items": {
+            "fields": [
+              {
+                "name": "id",
+                "type": [
+                  "null",
+                  "long"
+                ]
+              },
+              {
+                "name": "name",
+                "type": [
+                  "null",
+                  "string"
+                ]
+              }
+            ],
+            "name": "1",
+            "type": "record"
+          },
+          "type": "array"
+        }
+      ]
+    },
+    {
+      "name": "locked",
+      "type": [
+        "null",
+        "boolean"
+      ]
+    },
+    {
+      "name": "pull_request",
+      "type": [
+        "null",
+        {
+          "fields": [
+            {
+              "name": "url",
+              "type": [
+                "null",
+                "string"
+              ]
+            }
+          ],
+          "name": "1",
+          "type": "record"
+        }
+      ]
+    },
+    {
+      "name": "title",
+      "type": [
+        "null",
+        "string"
+      ]
+    }
+  ],
+  "name": "issue",
+  "namespace": "app.kageboushi.integrations.v1",
+  "type": "record"
+}
