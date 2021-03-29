@@ -1,5 +1,6 @@
 import subprocess
 import sys
+
 from typing import Callable
 
 
@@ -8,6 +9,7 @@ def _sys_exit(func: Callable[[], int]):
         code = func()
         if code != 0:
             sys.exit(code)
+
     return wrapper
 
 
@@ -25,5 +27,5 @@ def lint() -> int:
 def fmt() -> int:
     return max(
         subprocess.run(["isort", "."]).returncode,
-        subprocess.run(["black", "."]).returncode
+        subprocess.run(["black", "."]).returncode,
     )
