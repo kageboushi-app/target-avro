@@ -1,8 +1,11 @@
 import subprocess
+import sys
 
 
 def test():
-    subprocess.run(["python", "-u", "-m", "unittest", "discover"])
+    p = subprocess.run(["python", "-u", "-m", "unittest", "discover"])
+    if p.returncode != 0:
+        sys.exit(p.returncode)
 
 
 def lint():
