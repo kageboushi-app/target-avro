@@ -1,17 +1,29 @@
 import subprocess
 import sys
+from typing import Callable
 
 
-def test():
-    p = subprocess.run(["python", "-u", "-m", "unittest", "discover"])
-    if p.returncode != 0:
-        sys.exit(p.returncode)
+def _sys_exit(func: Callable[[], int]):
+    def wrapper():
+        code = func()
+        if code != 0:
+            sys.exit(code)
+    return wrapper
 
 
-def lint():
-    subprocess.run(["mypy", "target_avro", "tests"])
+@_sys_exit
+def test() -> int:
+    return subprocess.run(["python", "-u", "-m", "unittest", "discover"]).returncode
 
 
-def fmt():
-    subprocess.run(["isort", "."])
-    subprocess.run(["black", "."])
+@_sys_exit
+def lint() -> int:
+    return subprocess.run(["mypy", "target_avro", "tests"]).returncode
+
+
+@_sys_exit
+def fmt() -> int:
+    return max(
+        subprocess.run(["isort", "."]).returncode,
+        subprocess.run(["black", "."]).returncode
+    )
