@@ -84,9 +84,7 @@ def _process_str2datetime(records: List[Any], schema: Dict[str, Any]) -> List[An
     elif t == "array":
         return [_process_str2datetime(recs, schema["items"]) for recs in records]
     elif t == "string" and schema.get("format") == "date-time":
-        return [
-            int(dateutil.parser.parse(rec).timestamp()) * 1000 for rec in records
-        ]
+        return [int(dateutil.parser.parse(rec).timestamp()) * 1000 for rec in records]
     return records
 
 
@@ -111,7 +109,5 @@ def str2datetime(record: Dict[str, Any], props: Dict[str, Any]) -> Dict[str, Any
         elif "string" in types and schema.get("format") == "date-time":
             if record.get(prop) is None:
                 continue
-            record[prop] = (
-                int(dateutil.parser.parse(record[prop]).timestamp()) * 1000
-            )
+            record[prop] = int(dateutil.parser.parse(record[prop]).timestamp()) * 1000
     return record
