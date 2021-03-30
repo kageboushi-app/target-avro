@@ -8,7 +8,7 @@ class TestRecordConvert(unittest.TestCase):
         props = {"updated_at": {"type": ["null", "string"], "format": "date-time"}}
         record = {"updated_at": "2020-11-24T23:49:24.000000Z"}
         str2datetime(record, props)
-        self.assertEqual(1606229364000, record["updated_at"])
+        self.assertEqual(1606261764000, record["updated_at"])
 
     def test_str2datetime_object(self) -> None:
         props = {
@@ -21,7 +21,7 @@ class TestRecordConvert(unittest.TestCase):
         }
         record = {"a": {"b": "2020-11-24T23:49:24.000000Z"}}
         str2datetime(record, props)
-        self.assertEqual(1606229364000, record["a"]["b"])
+        self.assertEqual(1606261764000, record["a"]["b"])
 
     def test_str2datetime_array(self) -> None:
         props = {
@@ -32,7 +32,7 @@ class TestRecordConvert(unittest.TestCase):
         }
         record = {"a": ["2020-11-24T23:49:24.000000Z"]}
         str2datetime(record, props)
-        self.assertEqual(1606229364000, record["a"][0])
+        self.assertEqual(1606261764000, record["a"][0])
 
     def test_str2datetime_array_record(self) -> None:
         props = {
@@ -57,7 +57,7 @@ class TestRecordConvert(unittest.TestCase):
         }
         record = {"a": [["2020-11-24T23:49:24.000000Z"]]}
         str2datetime(record, props)
-        self.assertEqual(1606229364000, record["a"][0][0])
+        self.assertEqual(1606261764000, record["a"][0][0])
 
 
 if __name__ == "__main__":
