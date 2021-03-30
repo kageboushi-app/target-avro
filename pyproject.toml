@@ -4,6 +4,8 @@ version = "0.0.0"
 description = "Singer.io target for extracting data"
 authors = ["inamura <inamura@kageboushi.app>"]
 license = "AGPL-3.0"
+readme = "README.md"
+repository = "https://github.com/kageboushi-app/target-avro"
 
 [tool.poetry.dependencies]
 python = "^3.8"
