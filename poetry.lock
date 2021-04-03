@@ -58,7 +58,7 @@ description = "Fast read/write of AVRO files"
 name = "fastavro"
 optional = false
 python-versions = ">=3.6"
-version = "1.3.4"
+version = "1.3.5"
 
 [package.extras]
 codecs = ["python-snappy", "zstandard", "lz4"]
@@ -190,15 +190,15 @@ description = "Utils for streaming large files (S3, HDFS, GCS, Azure Blob Storag
 name = "smart-open"
 optional = false
 python-versions = ">=3.6.*"
-version = "4.2.0"
+version = "5.0.0"
 
 [package.extras]
 all = ["boto3", "google-cloud-storage", "azure-storage-blob", "azure-common", "azure-core", "requests"]
 azure = ["azure-storage-blob", "azure-common", "azure-core"]
-gcp = ["google-cloud-storage"]
+gcs = ["google-cloud-storage"]
 http = ["requests"]
 s3 = ["boto3"]
-test = ["boto3", "google-cloud-storage", "azure-storage-blob", "azure-common", "azure-core", "requests", "mock", "moto (1.3.14)", "pathlib2", "responses", "boto3", "paramiko", "parameterizedtestcase", "pytest", "pytest-rerunfailures"]
+test = ["boto3", "google-cloud-storage", "azure-storage-blob", "azure-common", "azure-core", "requests", "mock", "moto (1.3.14)", "pathlib2", "responses", "paramiko", "parameterizedtestcase", "pytest", "pytest-rerunfailures"]
 webhdfs = ["requests"]
 
 [[package]]
@@ -234,7 +234,7 @@ python-versions = "*"
 version = "3.7.4.3"
 
 [metadata]
-content-hash = "d5524679d0f035594006c9047593f9dfb5da731c2d1b41436d151e6db0561edc"
+content-hash = "ce4351591482fcacec24d23739c34e55432ac8889a97734732048b101b713f32"
 lock-version = "1.0"
 python-versions = "^3.8"
 
@@ -258,20 +258,20 @@ click = [
     {file = "click-7.1.2.tar.gz", hash = "sha256:d2b5255c7c6349bc1bd1e59e08cd12acbbd63ce649f2588755783aa94dfb6b1a"},
 ]
 fastavro = [
-    {file = "fastavro-1.3.4-cp36-cp36m-macosx_10_14_x86_64.whl", hash = "sha256:3d9529bdfabfa38673768df1dd3146050a4c4e51924908f8a434ab61edea4067"},
-    {file = "fastavro-1.3.4-cp36-cp36m-manylinux2014_aarch64.whl", hash = "sha256:065d83f35e179654f1dd5a804d457753745b865cd2698a56bbc7fa33750ce908"},
-    {file = "fastavro-1.3.4-cp36-cp36m-manylinux2014_x86_64.whl", hash = "sha256:92ea0aa736d7a3c4ace86ca0971ceaecdac771fb3fc9b311cd24a1a20a8ab7a3"},
-    {file = "fastavro-1.3.4-cp36-cp36m-win_amd64.whl", hash = "sha256:e9d8277ee9972aeabaa72acfae262b1b310cee5a4d29a3347177661592733b9d"},
-    {file = "fastavro-1.3.4-cp37-cp37m-macosx_10_14_x86_64.whl", hash = "sha256:fedcc1f1449825365d327714a65501171af6e40bd371356049218ca47deb7464"},
-    {file = "fastavro-1.3.4-cp37-cp37m-manylinux2014_x86_64.whl", hash = "sha256:02406252b9c18b0a152d1536b4cbed8766192427da6e5e4eb9eb3d5e1fc96725"},
-    {file = "fastavro-1.3.4-cp37-cp37m-win_amd64.whl", hash = "sha256:48704347fb1b81fe2234f89583d3611500eb0b336712dd3ba053389c0a8d0584"},
-    {file = "fastavro-1.3.4-cp38-cp38-macosx_10_14_x86_64.whl", hash = "sha256:11ca52083cc79b1a3e7e9fbb2b84b810fe63bfe65c783ccb261081c2fcc28e34"},
-    {file = "fastavro-1.3.4-cp38-cp38-manylinux2014_x86_64.whl", hash = "sha256:43408a5b7db951fd4dd293d7253c308e8cec78f5f126dfe756b20e4fe5a5a47a"},
-    {file = "fastavro-1.3.4-cp38-cp38-win_amd64.whl", hash = "sha256:bd53092758f162080462d1dc170a25974204c0b31aba200798ed95f1429ca8aa"},
-    {file = "fastavro-1.3.4-cp39-cp39-macosx_10_14_x86_64.whl", hash = "sha256:86ed5ed392bfefa822608c1c08fc17eea702e0287c268e922b45f850df6d7435"},
-    {file = "fastavro-1.3.4-cp39-cp39-manylinux2014_x86_64.whl", hash = "sha256:e22f9a41949d5d330db4c959fb3bc0bbe226eefc3ed05d08d52b133b735ca5d0"},
-    {file = "fastavro-1.3.4-cp39-cp39-win_amd64.whl", hash = "sha256:4fe9583e772cef1656bab4d7ee27a306a317f3f4fdf4cc45f2add0d919d20f8b"},
-    {file = "fastavro-1.3.4.tar.gz", hash = "sha256:4c0c2ed0c218d3e8737bd04d6cac2a3c1afd11090d3ac3a45fbaafd73cfe2cd7"},
+    {file = "fastavro-1.3.5-cp36-cp36m-macosx_10_14_x86_64.whl", hash = "sha256:a3d5d8ff3ea47d7ab39b253736c5546417ad4765cf336f63a533363720268c4e"},
+    {file = "fastavro-1.3.5-cp36-cp36m-manylinux2014_aarch64.whl", hash = "sha256:e39d9d41a441597f795c3ecd5404c4b4a57f83c44040bc3b58d6c268faaa3546"},
+    {file = "fastavro-1.3.5-cp36-cp36m-manylinux2014_x86_64.whl", hash = "sha256:68fc157d1624ed5f09a2b8a41b19f7f7a8ddb6716e26b9af66b4d9613f1d462f"},
+    {file = "fastavro-1.3.5-cp36-cp36m-win_amd64.whl", hash = "sha256:fbd85b63f88ac7023fcb1828250fdc9395fddec8d226dd527ad29a8512787785"},
+    {file = "fastavro-1.3.5-cp37-cp37m-macosx_10_14_x86_64.whl", hash = "sha256:722d514ddbfa926ce2cceddb3b0c4bab87167f2d45ae254334c12f6a1634d1a0"},
+    {file = "fastavro-1.3.5-cp37-cp37m-manylinux2014_x86_64.whl", hash = "sha256:80343cbf1c90d93a078265cc3ec6333914d4ef1a088714e2f3ab71c2771407b1"},
+    {file = "fastavro-1.3.5-cp37-cp37m-win_amd64.whl", hash = "sha256:fb3a5aa3e2666700c268be2da67b14d6ca7019eeffc3fa25134414a19733dd6a"},
+    {file = "fastavro-1.3.5-cp38-cp38-macosx_10_14_x86_64.whl", hash = "sha256:43c268586699f37ed282b8cb1dcfd7f0cf0f2d19cfe8b507de4fa93683cc0530"},
+    {file = "fastavro-1.3.5-cp38-cp38-manylinux2014_x86_64.whl", hash = "sha256:8bb762d702d96abfc630860a671371a7aa94b09ffd3c155d1b2ce016119d062e"},
+    {file = "fastavro-1.3.5-cp38-cp38-win_amd64.whl", hash = "sha256:1187b1f353679e5740351c4a050f41191cdad1ff9277faf6e83d9de2dd20a8df"},
+    {file = "fastavro-1.3.5-cp39-cp39-macosx_10_14_x86_64.whl", hash = "sha256:c59ecef619d7739c6c86a0b7fbdc3bf274b3529c3ae2b4497e9496b51a32090f"},
+    {file = "fastavro-1.3.5-cp39-cp39-manylinux2014_x86_64.whl", hash = "sha256:1812e0f61b3a18ccd9cf6370c2e691b39a3cadbdc45d98560828206848b2b0f1"},
+    {file = "fastavro-1.3.5-cp39-cp39-win_amd64.whl", hash = "sha256:ffee71f4f82b53c620dbfb39f234c4ba5b3f6144f80b236e797c1b561898f94a"},
+    {file = "fastavro-1.3.5.tar.gz", hash = "sha256:02e3377dfb6f0ae152209cc2f92ca20fbdd75764a9ffef3662bf4682e9fe559e"},
 ]
 isort = [
     {file = "isort-5.8.0-py3-none-any.whl", hash = "sha256:2bb1680aad211e3c9944dbce1d4ba09a989f04e238296c87fe2139faa26d655d"},
@@ -391,7 +391,8 @@ six = [
     {file = "six-1.15.0.tar.gz", hash = "sha256:30639c035cdb23534cd4aa2dd52c3bf48f06e5f4a941509c8bafd8ce11080259"},
 ]
 smart-open = [
-    {file = "smart_open-4.2.0.tar.gz", hash = "sha256:d9f5a0f173ccb9bbae528db5a3804f57145815774f77ef755b9b0f3b4b2a9dcb"},
+    {file = "smart_open-5.0.0-py3-none-any.whl", hash = "sha256:ed310ac51a797051b42f9437a566ac8149a3abf8c80ab994a8bd92d96fb7cf44"},
+    {file = "smart_open-5.0.0.tar.gz", hash = "sha256:02e5e02207d955a1f9fd924c37900ac272536bd24393ae731b6945d4f766015f"},
 ]
 strict-rfc3339 = [
     {file = "strict-rfc3339-0.7.tar.gz", hash = "sha256:5cad17bedfc3af57b399db0fed32771f18fc54bbd917e85546088607ac5e1277"},
