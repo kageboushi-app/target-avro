@@ -97,7 +97,8 @@ def persist_lines(
             fields = json2avro(props, o["schema"].get("required", []))
             logger.debug(" ".join([t, stream, "Avro", json.dumps(fields)]))
 
-            f = open("{}.{}.avro".format(config["prefix"], stream), "wb")
+            name = "{}.{}.avro".format(config["prefix"], stream)
+            f = open(name, "wb")
             objects[stream] = f
             writers[stream] = fastavro.write.Writer(
                 f,
@@ -118,6 +119,10 @@ def persist_lines(
     for it in writers.keys():
         writers[it].flush()
     for it in objects.keys():
+        o = objects[it]
+        name = "{}.{}.avro".format(config["prefix"], it)
+        stat = {"type": "counter", "stat": "size", "value": o.tell(), "tags": {"name": name}}
+        logger.info("STAT: {}".format(json.dumps(stat)))
         objects[it].close()
 
     return state
