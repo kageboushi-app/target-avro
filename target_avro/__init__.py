@@ -121,7 +121,12 @@ def persist_lines(
     for it in objects.keys():
         o = objects[it]
         name = "{}.{}.avro".format(config["prefix"], it)
-        stat = {"type": "counter", "stat": "size", "value": o.tell(), "tags": {"name": name}}
+        stat = {
+            "type": "counter",
+            "stat": "size",
+            "value": o.tell(),
+            "tags": {"name": name},
+        }
         logger.info("STAT: {}".format(json.dumps(stat)))
         objects[it].close()
 
